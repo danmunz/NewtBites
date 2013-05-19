@@ -1,0 +1,155 @@
+<?php
+include "sentence.php";
+	?>
+		<!doctype html>
+		<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+		<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+		<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+		<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+		<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+		<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+		<head>
+
+			<!-- Meta info -->
+			<meta charset="utf-8">
+			<title>Newtbites :: The Speaker speaks his mind. Fundamentally.</title>
+		  	<meta name="description" content="A refreshable (and refreshing) satire of the 58th Speaker of the House of Representatives and his peculiarly apocalyptic declarations.">
+			<meta name="author" content="Dan Munz">
+
+			<!-- Mobile viewport optimized: j.mp/bplateviewport -->
+			<meta name="viewport" content="width=device-width,initial-scale=1">
+
+			<!-- Stylesheet -->
+			<link rel="stylesheet" href="newt.css">
+
+			<!-- Favicon -->
+			<link rel="shortcut icon" href="favicon.ico" />
+
+			<!-- Google font calls -->
+			<link href='http://fonts.googleapis.com/css?family=Lato:100,400,900' rel='stylesheet' type='text/css'>
+			<link href='http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400,400italic' rel='stylesheet' type='text/css'>
+		    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
+		</head>
+
+		<body>
+			<div id="fb-root"></div> <!-- XFBML code for Facebook "like" button -->
+			<script>(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) {return;}
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));</script>
+		  <div id="container">
+
+		  	<div id="newt"> <!-- Background image container -->
+
+				<img class="newtface" src="newt.jpg"> <!-- Background image -->
+
+			</div>
+
+		    <div id="main" role="main"> <!-- This contains everything, basically. -->
+
+				<div id="newtsays">
+
+					<header> <!-- Probably totally mangling the proper use of the header tag here. -->
+						<span class="preamble">We need to think very seriously about the fact that</span>
+					</header>
+
+					<!-- Delicious Newt quotes go here. -->
+					<span id="sentence">The <?=$sentence?></span>
+
+				</div>
+
+		    	<div id="linkblock">
+
+		    		<a id="hitme" href="/">Hit me again, Mr. Speaker!</a>
+
+			    	<!-- Replace [SLUG] with an insert of the agency name in question. No reason we can't accidentally educate people. -->
+		    		<a id="wiki" href="http://str8.to/wiki+<?=$agency?>" target="_blank">What is Newt talking about?</a>
+
+		    	</div>
+
+		    </div>
+
+		    <footer>
+
+				<div id="credits">
+
+
+					<div id="tweetbutton">
+
+					<a href="https://twitter.com/share" class="twitter-share-button" data-text="NewtBites: The Speaker speaks his mind. Fundamentally." data-count="vertical" data-url="http://NewtBites.com" data-related="<?php $handles = array("dan_munz"); echo $handles[array_rand($handles)];?>">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+						
+						<div class="fb-like" data-href="http://newtbites.com/" data-send="false" data-layout="box_count" data-width="80" data-show-faces="false"></div>
+						
+						</div>
+
+					<p>Newtbites is a <?php//<a href="http://twitter.com/intent/follow?screen_name=yahelc" target="_blank">@yahelc</a> and ;?><a href="http://twitter.com/intent/follow?screen_name=dan_munz" target="_blank">@dan_munz</a> production. Inspired by <a href="http://finance.yahoo.com/news/Newt-Gingrich-CBO-reactionary-cnnm-2123044909.html" target="_blank">this</a> then <a href="https://twitter.com/#!/dan_munz/status/138777389357481985" target="_blank">this</a> then <a href="https://twitter.com/#!/yahelc/status/138777815448428544" target="_blank">this</a>. <a href="http://www.flickr.com/photos/gageskidmore/6239088890/" target="_blank">Photo</a> by Flickr user gageskidmore used under a <a href="http://creativecommons.org/licenses/by-sa/2.0/deed.en" target="_blank">Creative Commons license</a>. Scraper source is <a href="https://gist.github.com/1446981" target="_blank">here</a>. Did Newt ever actually say any of this stuff? Of course not. But we bet he thinks it all the time. This site was created 100% in our free time and doesn't represent the views of our employers, or anyone else, really.</p>
+					
+				<a class="permalink" id="permalink" href="/?<?=$permalink?>">Permalink</a></p>					
+			
+				</div>
+
+
+
+		    </footer>
+
+		  </div> <!--! end of #container -->
+
+			<!-- Google Analytics tracking code -->
+		 	<script type="text/javascript">
+
+		 	var _gaq = _gaq || [];
+		 	_gaq.push(['_setAccount', 'UA-27194398-1']);
+		 	_gaq.push(['_trackPageview']);
+		    _gaq.push(['b._setAccount', 'UA-27196532-1']);
+		    _gaq.push(['b._trackPageview']);
+		
+
+			(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+			</script>
+
+			<!-- Konami code. Because why not? -->
+
+			<script type="text/javascript" src="http://konami-js.googlecode.com/svn/trunk/konami.js"></script>
+			<script type="text/javascript">
+				konami = new Konami()
+				konami.load("http://www.tiffany.com/?siteid=1");
+			</script>
+<script>
+if(navigator.userAgent.match(/(iPod|iPhone|iPad)/)){ //i know, i know. I shouldn't be UA sniffing, but, its a minor convenience.
+	window.addEventListener("load",function() {
+		setTimeout(function(){
+		    window.scrollTo(0, 1);
+		  }, 0);
+	});
+}
+</script>
+<script>
+jQuery(function($){
+
+	$("#hitme").click(function(e){
+		e.preventDefault();
+		$.getJSON("/json.php", function(val){
+			$("#sentence").text(val.sentence);
+			$("#permalink").attr("href", "http://newtbites.com" + val.permalink);
+			$("#wiki").attr("href", "http://str8.to/wiki+" + val.agency);
+			_gaq.push(['_trackPageview']);
+		    _gaq.push(['b._trackPageview']);
+		 	
+		});
+	});
+	
+});
+</script>
+		</body>
+		</html>
+
+

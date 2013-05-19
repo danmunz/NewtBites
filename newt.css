@@ -1,0 +1,277 @@
+/*The basics*/
+
+html,body{
+margin-top:0;
+padding-top:0;
+padding-bottom: 10px;
+}
+
+body{
+font: 100% 'Lato', 'Helvetica Neue',Helvetica,Arial,sans-serif;
+background-color: #000002;
+}
+
+a:hover{
+-webkit-transition:all 200ms ease-in;
+-moz-transition:all 200ms ease-in;
+-o-transition:all 200ms ease-in;
+transition:all 200ms ease-in;
+}
+
+/*Styling for background image and container*/
+
+#newt{
+background:#000002;
+width: 100%;
+position:fixed;
+z-index: -9999;
+pading: 0;
+margin:0;
+}
+
+.newtface{
+max-width:45%;
+}
+
+/*This is the main text area. The yellow one.*/
+
+#main{
+width: 53%;
+margin-left:40%;
+box-shadow: 0px 0px 20px white;
+display: block;
+text-align: center;
+-moz-border-radius-bottomright: 5px;
+border-bottom-right-radius: 5px;
+-moz-border-radius-bottomleft: 5px;
+border-bottom-left-radius: 5px;
+}
+
+#newtsays{ /*Newt's wisdom*/
+font-size: 2.8em;
+font-weight: 900;
+line-height: 120%;
+padding: 0.5em 0.75em 0.5em 0.75em;
+background: gold;
+text-shadow: -1px -1px 0px white;
+color: #333;
+text-transform: uppercase;
+}
+
+.preamble{ /*How Newt begins every sentence*/
+font-family: 'Sorts Mill Goudy', serif;
+text-transform: none;
+font-style: italic;
+font-size: 1.25rem;
+display: block;
+font-weight: normal;
+text-shadow: none;
+color: #333;
+line-height: 100%;
+padding: 1em 0 1.25em 0;
+}
+
+.preamble:before{
+content:"\2014\00a0";
+}
+
+.preamble:after{
+content:"\00a0\2014";
+}
+
+/*Two main link buttons*/
+
+#linkblock{
+font-family: 'Sorts Mill Goudy', serif;
+background: gold;
+padding: 0.75em 0 2.25em 0;
+font-size: 1.2em;
+font-style: italic;
+-moz-border-radius-bottomright: 5px;
+border-bottom-right-radius: 5px;
+-moz-border-radius-bottomleft: 5px;
+border-bottom-left-radius: 5px;
+text-align: center;
+color: #666;
+font-weight: 100;
+}
+
+#linkblock a:first-child{ /*Keep the links separated*/
+margin-right: 4em;
+}
+
+#linkblock a{
+text-decoration: none;
+padding: 6px 10px 4px 10px;
+color: #333;
+border-top: solid 1px #666;
+border-bottom: solid 1px #666;
+}
+
+#linkblock a:hover{
+background: #666;
+color: gold;
+}
+
+/*Credits*/
+
+#credits{
+width: 53%;
+margin-left:40%;
+display: block;
+text-align: center;
+font-size: 0.875em;
+color: #666;
+margin-top: 20px;
+text-align: left;
+font-weight: 400;
+}
+
+#credits a{
+text-decoration: none;
+color: #999;
+}
+
+#credits a:hover{
+background-color: #999;
+color: #333;
+}
+
+#tweetbutton{ /*The Twitter button*/
+float:left;
+max-width: 60px;
+margin-right: 10px;
+}
+
+.fb-like{
+margin-top:10px;
+}
+
+#credits a.permalink{ 
+float:right;
+padding: 4px 6px;
+text-transform: uppercase;
+font-size: 0.9em;
+}
+
+#credits a.permalink:hover{ 
+background: gold;
+border-radius: 3px;
+color: black;
+box-shadow: 0px 0px 10px white;
+text-decoration: underline;
+}
+
+/*Media queries!*/
+@media only screen and (max-width: 1024px) { /*Netbooks, old monitors, non-maximized browser windows, etc.*/
+
+#newtsays{
+font-size: 2em;
+}
+
+.preamble{
+font-size: 1rem;
+}
+
+#linkblock{
+font-size: .9em;
+}
+
+#linkblock a:first-child{
+margin-right: 3em;
+}
+
+}
+
+
+@media only screen and (max-width: 768px) { /*Tablets*/
+
+#newtsays{
+font-size: 1.5em;
+}
+
+.preamble{
+font-size: 0.875rem;
+}
+
+
+#linkblock{
+padding-top: 0px;
+padding-bottom: 15px;
+}
+
+#linkblock a{
+display: block;
+}
+
+#linkblock a:first-child{
+margin-right: 0;
+border-bottom: none;
+}
+
+}
+
+
+@media only screen and (max-width: 480px) { /*Handheld mobile devices*/
+
+#main{
+width: 61%;
+margin-left:38%;
+}
+
+#newt{
+position:absolute;
+}
+
+#newtsays{
+font-size: 1.25em;
+}
+
+.preamble{
+display:none;
+}
+
+#credits{
+width: 94%;
+margin-left:2%;
+font-size: 0.5em;
+color: #666;
+background: #000000;
+box-shadow: -10px 0px 20px black;
+padding: 2%;
+}
+
+#linkblock{
+padding-bottom: 5px;
+font-size: 1.15em;
+}
+
+}
+@media only screen and (max-width: 320px) { /*Handheld mobile devices - portrait orientation*/
+
+#newtsays{
+font-size: 1.05em;
+}
+
+.preamble{
+display:none;
+}
+
+#linkblock{
+padding-bottom: 5px;
+font-size: 0.75em;
+}
+
+#linkblock a{
+padding: 5px 0;
+}
+
+#credits{
+font-size: 0.75em;
+}
+
+#credits a.permalink{ 
+float:none;
+}
+
+}
