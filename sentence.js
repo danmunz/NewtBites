@@ -12,16 +12,16 @@ var $_GET = (function() {
 } ());
 
 
-$agency_key = firstload && $_GET["g"] ? +$_GET["g"] : Math.round(Math.random() * $agencies.length);
+$agency_key = firstload && $_GET["g"] ? +$_GET["g"] : Math.floor(Math.random() * $agencies.length);
 $agency = $agencies[$agency_key];
 
 $adverbs = ["a fundamentally", "an intrinsically ", "an inherently", "an obviously", "a historically", "a violently", "a universally recognized", "a congenitally", "a constitutionally", "a clearly", "a desperately", "a dramatically", "an overwhelmingly", "a comprehensively", "an unalloyedly"];
-$adverb_key = firstload && $_GET["v"] ? +$_GET["v"] : Math.round(Math.random() * $adverbs.length);
+$adverb_key = firstload && $_GET["v"] ? +$_GET["v"] : Math.floor(Math.random() * $adverbs.length);
 
 $adverb = $adverbs[$adverb_key];
 
 $adjectives  = ["socialist", "colonialist", "Kenyan", "neo-colonialist", "fascist", "anti-American", "subversive", "fascist", "Harvard elitist", "anti-capitalist", "Marxist", "radical Keynesian", "anarchist", "leftist", "anti-modern", "countercultural", "radical", "neo-Jihadist", "post-American", "historically ignorant", "unwashed Communist", "pro-madrassa", "post-national", "anti-property rights", "post-traditionalist"];
-$adjective_key = firstload && $_GET["j"] ? +$_GET["j"] : Math.round(Math.random() * $adjectives.length);
+$adjective_key = firstload && $_GET["j"] ? +$_GET["j"] : Math.floor(Math.random() * $adjectives.length);
 $adjective = $adjectives[$adjective_key];
 
 $sentence =  "The " + [$agency, "is", $adverb, $adjective, "institution."].join(" ");
