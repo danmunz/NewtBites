@@ -132,7 +132,7 @@ if(navigator.userAgent.match(/(iPod|iPhone|iPad)/)){ //i know, i know. I shouldn
 jQuery(function($){
 	function updateDOMWithSentence(sentence){
 		$("#sentence").text(sentence.sentence);
-		$("#wiki").attr("href", "http://str8.to/wiki+" + sentence.agency);
+		$("#wiki").attr("href", "https://en.wikipedia.org/wiki/" + sentence.agency);
 		$("#permalink").attr("href", sentence.permalink);
 		_gaq.push(['_trackPageview']);
 	    _gaq.push(['b._trackPageview']);
